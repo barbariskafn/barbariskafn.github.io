@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Иван — Python и веб-разработка</title>
+<meta name="description" content="Сайт-визитка Ивана: машинное обучение на Python, компьютерное зрение и вёрстка сайтов.">
+<style>
+:root{--bg:#0e1116;--card:#161b22;--line:#2a313c;--text:#e6edf3;--muted:#9aa5b1;--accent:#5ee6a8;--accent2:#6cb6ff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:inherit}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;background:rgba(14,17,22,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+.logo{font-weight:700;font-size:18px;text-decoration:none}.logo span{color:var(--accent)}
+nav ul{display:flex;gap:24px;list-style:none}
+nav ul a{text-decoration:none;color:var(--muted);font-size:15px}nav ul a:hover{color:var(--text)}
+.hero{padding:96px 0 72px}
+.tag{display:inline-block;font-family:ui-monospace,Menlo,monospace;font-size:13px;color:var(--accent);border:1px solid var(--line);border-radius:999px;padding:4px 12px;margin-bottom:24px}
+h1{font-size:clamp(36px,6vw,60px);line-height:1.1;letter-spacing:-.02em;margin-bottom:20px}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:19px;color:var(--muted);max-width:620px;margin-bottom:32px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:600;text-decoration:none;border:1px solid var(--line)}
+.btn.main{background:var(--accent);color:#0e1116;border-color:var(--accent)}
+.btn:hover{transform:translateY(-1px)}
+section{padding:64px 0;border-top:1px solid var(--line)}
+h2{font-size:28px;margin-bottom:8px}
+.sub{color:var(--muted);margin-bottom:32px}
+.skills{display:flex;flex-wrap:wrap;gap:10px}
+.skills span{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px 14px;font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column;transition:border-color .2s}
+.card:hover{border-color:var(--accent)}
+.card .icon{font-size:28px;margin-bottom:12px}
+.card h3{font-size:18px;margin-bottom:8px;font-family:ui-monospace,Menlo,monospace}
+.card p{color:var(--muted);font-size:15px;flex:1;margin-bottom:16px}
+.stack{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.stack span{font-size:12px;color:var(--accent2);background:rgba(108,182,255,.1);border-radius:6px;padding:3px 8px}
+.card a.link{color:var(--accent);font-weight:600;text-decoration:none;font-size:15px}
+.card .priv{color:var(--muted);font-size:14px}
+.contact{text-align:center}
+.contact .btns{justify-content:center}
+footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:14px;text-align:center}
+@media(max-width:600px){nav ul{gap:14px}.hero{padding:64px 0 48px}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo" href="#">Ivan<span>.dev</span></a>
+  <ul><li><a href="#about">Обо мне</a></li><li><a href="#projects">Проекты</a></li><li><a href="#contact">Контакт</a></li></ul>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="tag">👋 Привет, я Иван</div>
+  <h1>Учусь <em>машинному обучению</em> и делаю сайты</h1>
+  <p class="lead">Пишу на Python: обучаю нейросети распознавать картинки и ищу объекты на фото с помощью OpenCV. Ещё верстаю сайты на HTML и CSS.</p>
+  <div class="btns">
+    <a class="btn main" href="#projects">Смотреть проекты</a>
+    <a class="btn" href="https://github.com/barbariskafn" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</div></header>
+
+<section id="about"><div class="wrap">
+  <h2>Обо мне</h2>
+  <p class="sub">Чем я пользуюсь в своих проектах</p>
+  <div class="skills">
+    <span>🐍 Python</span><span>🧠 TensorFlow / Keras</span><span>👁️ OpenCV</span><span>📊 Matplotlib</span><span>🌐 HTML</span><span>🎨 CSS</span><span>🔧 Git и GitHub</span>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <h2>Проекты</h2>
+  <p class="sub">Всё, что лежит у меня на GitHub</p>
+  <div class="grid">
+    <div class="card">
+      <div class="icon">🧠</div>
+      <h3>ml-image-recognition</h3>
+      <p>Нейросети, которые распознают рукописные цифры (MNIST), одежду (Fashion-MNIST), а также кошек и собак. Плюс поиск лиц, машин и знаков «стоп» на фотографиях.</p>
+      <div class="stack"><span>Python</span><span>TensorFlow</span><span>Keras</span><span>OpenCV</span></div>
+      <a class="link" href="https://github.com/barbariskafn/ml-image-recognition" target="_blank" rel="noopener">Открыть на GitHub →</a>
+    </div>
+    <div class="card">
+      <div class="icon">📚</div>
+      <h3>stepik-python-beginners-solutions</h3>
+      <p>Мои решения задач курса «Python для начинающих» на Stepik: условия, циклы, работа с числами. Разложены по разделам курса.</p>
+      <div class="stack"><span>Python</span><span>Алгоритмы</span></div>
+      <a class="link" href="https://github.com/barbariskafn/stepik-python-beginners-solutions" target="_blank" rel="noopener">Открыть на GitHub →</a>
+    </div>
+    <div class="card">
+      <div class="icon">🛠️</div>
+      <h3>python-mini-scripts</h3>
+      <p>Небольшие скрипты: калькулятор в терминале и показ видео с веб-камеры через OpenCV.</p>
+      <div class="stack"><span>Python</span><span>OpenCV</span></div>
+      <span class="priv">🔒 Приватный репозиторий</span>
+    </div>
+    <div class="card">
+      <div class="icon">🎨</div>
+      <h3>html-css-practice-sites</h3>
+      <p>Учебные сайты: страница «обо мне», блог, книга, галерея и первая версия портфолио Ivan.dev.</p>
+      <div class="stack"><span>HTML</span><span>CSS</span></div>
+      <span class="priv">🔒 Приватный репозиторий</span>
+    </div>
+    <div class="card">
+      <div class="icon">🏠</div>
+      <h3>personal-website</h3>
+      <p>Личный сайт с разделами «Обо мне», новостями и таблицами: тренировка вёрстки и навигации.</p>
+      <div class="stack"><span>HTML</span><span>CSS</span></div>
+      <span class="priv">🔒 Приватный репозиторий</span>
+    </div>
+  </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <h2>Связаться со мной</h2>
+  <p class="sub">Пиши на GitHub — буду рад новым идеям и проектам</p>
+  <div class="btns"><a class="btn main" href="https://github.com/barbariskafn" target="_blank" rel="noopener">github.com/barbariskafn</a></div>
+</div></section>
+
+<footer>© 2026 Ivan.dev · Сделано на HTML и CSS</footer>
+</body>
+</html>
